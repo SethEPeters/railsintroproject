@@ -1,0 +1,2 @@
+class DogInfo < ApplicationRecord
+end
