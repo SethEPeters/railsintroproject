@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_07_07_154947) do
+ActiveRecord::Schema[8.1].define(version: 2026_07_07_235243) do
+  create_table "anime_facts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.string "fact"
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "anime_quotes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.string "quote"
+    t.datetime "updated_at", null: false
+  end
+
   create_table "dog_facts_1s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "dog_fact"
@@ -20,6 +32,12 @@ ActiveRecord::Schema[8.1].define(version: 2026_07_07_154947) do
   create_table "dog_facts_2s", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "dog_fact"
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dog_images", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.string "dog_image"
     t.datetime "updated_at", null: false
   end
 

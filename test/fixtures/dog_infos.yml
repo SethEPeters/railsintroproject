@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  dog_breed: MyString
-  dog_age: MyString
-  dog_sound: MyString
+  breed: MyString
+  age: MyString
+  sound: MyString
 
 two:
   name: MyString
-  dog_breed: MyString
-  dog_age: MyString
-  dog_sound: MyString
+  breed: MyString
+  age: MyString
+  sound: MyString

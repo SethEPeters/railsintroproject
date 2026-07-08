@@ -8,14 +8,32 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+require 'faker'
+require 'net/http'
+require 'json'
+
 DogInfo.destroy_all
 DogFacts1.destroy_all
 DogFacts2.destroy_all
 
-DogInfo
+200.times do
+DogInfo.create(name: Faker::Creature::Dog.name,
+            dog_breed: Faker::Creature::Dog.breed,
+            dog_age: Faker::Creature::Dog.age,
+            dog_sound: Faker::Creature::Dog.sound)
+end
 
-api_url_dog_api = "http://dog-api.kinduff.com/api/facts"
-uri_dog_api = URI(api_url_dog_api)
+# this will serve a random dog image. Just need to save it once
+DogImage.create!(
+  dog_image: "https://place.dog/300/200"
+)
 
-api_url_dog_fact_api = "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all"
-uri_dog_fact_api = URI(api_url_dog_fact_api)
+200.times do
+anime_quote_url = "https://api.animechan.io/v1/quotes/random"
+anime_quote_response = Net::HTTP.get(URI(anime_quote_url))
+anime_quote_data = JSON.parse(anime_quote_response)
+puts anime_quote_data["data"]["content"]
+AnimeQuote.create!(
+  quote: anime_quote_data["data"]["content"]
+)
+end

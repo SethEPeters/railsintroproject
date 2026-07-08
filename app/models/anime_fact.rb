@@ -1,0 +1,2 @@
+class AnimeFact < ApplicationRecord
+end
