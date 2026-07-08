@@ -5,7 +5,13 @@
 </ul>
 <hr>
 
-<img src="<%= @doginfo.dog_image.dog_image %>" alt="dog profile picture">
+<% if @doginfo.id%5==0 %>
+  <img src="<%= @doginfo.dog_image.dog_image %>" alt="dog profile picture">
+  <img src="<%= @doginfo.dog_image.dog_image %>" alt="dog profile picture">
+<% else %>
+  <img src="<%= @doginfo.dog_image.dog_image %>" alt="dog profile picture">
+<% end %>
+
 <p>Name: <%= @doginfo.name %></p>
 <p>Age: <%= @doginfo.dog_age %></p>
 <p>Sound: <%= @doginfo.dog_sound %></p>
