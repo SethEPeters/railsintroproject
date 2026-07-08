@@ -1,3 +1,10 @@
+<h1>Welcome to <%= @doginfo.name %>'s Profile</h1>
+<ul>
+  <li><a href="http://localhost:3000/dog_infos">Index</a></li>
+  <li><a href="http://localhost:3000/dog_infos/about">About</a></li>
+</ul>
+<hr>
+
 <img src="<%= @doginfo.dog_image.dog_image %>" alt="dog profile picture">
 <p>Name: <%= @doginfo.name %></p>
 <p>Age: <%= @doginfo.dog_age %></p>
