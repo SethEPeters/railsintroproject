@@ -3,7 +3,7 @@ class DogInfosController < ApplicationController
     if params[:search]
       @doginfos = DogInfo.where("name LIKE ?", "%#{params[:search]}%")
     else
-      @doginfos = DogInfo.all
+      @doginfos = DogInfo.all.page params[:page]
     end
   end
 
