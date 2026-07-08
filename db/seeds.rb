@@ -25,7 +25,8 @@ end
 
 # this will serve a random dog image. Just need to save it once
 DogImage.create!(
-  dog_image: "https://place.dog/300/200"
+  dog_image: "https://place.dog/300/200",
+  dog_info: dog
 )
 
 200.times do
