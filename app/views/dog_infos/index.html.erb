@@ -1,8 +1,12 @@
 <h1>Doginfos#index</h1>
 <p> Find me in app/views/dog_infos/index.html.erb</p>
-<%= @doginfos.inspect %>
-<hr>
-<%= @dogimages.inspect %>
+
+<form action="http://localhost:3000/dog_infos" method="post">
+  <label for="search">Search</label>
+  <input type="search" id="search" />
+
+  <input type="submit" />
+</form>
 
 <ol>
   <% @doginfos.each do |doginfo| %>
