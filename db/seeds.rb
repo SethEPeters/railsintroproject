@@ -12,29 +12,20 @@ require 'faker'
 require 'net/http'
 require 'json'
 
-DogInfo.destroy_all
-DogFacts1.destroy_all
-DogFacts2.destroy_all
+DogInfo.delete_all
+DogImage.delete_all
+# AnimeQuote.destroy_all
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='dog_infos'")
 
 200.times do
-DogInfo.create(name: Faker::Creature::Dog.name,
+dog = DogInfo.create!(name: Faker::Creature::Dog.name,
             dog_breed: Faker::Creature::Dog.breed,
             dog_age: Faker::Creature::Dog.age,
             dog_sound: Faker::Creature::Dog.sound)
-end
-
 # this will serve a random dog image. Just need to save it once
 DogImage.create!(
+  dog_info: dog,
   dog_image: "https://place.dog/300/200",
-  dog_info: dog
-)
-
-200.times do
-anime_quote_url = "https://api.animechan.io/v1/quotes/random"
-anime_quote_response = Net::HTTP.get(URI(anime_quote_url))
-anime_quote_data = JSON.parse(anime_quote_response)
-puts anime_quote_data["data"]["content"]
-AnimeQuote.create!(
-  quote: anime_quote_data["data"]["content"]
 )
 end
+
