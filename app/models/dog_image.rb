@@ -1,3 +1,3 @@
 class DogImage < ApplicationRecord
-  belongs_to :dog_info
+  has_many :dog_infos
 end

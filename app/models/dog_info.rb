@@ -1,4 +1,3 @@
 class DogInfo < ApplicationRecord
-  has_many :dog_image
-  has_many :anime_quotes
+  belongs_to :dog_image
 end

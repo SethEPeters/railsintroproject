@@ -1,0 +1,11 @@
+<h1>Doginfos#index</h1>
+<p> Find me in app/views/dog_infos/index.html.erb</p>
+<%= @doginfos.inspect %>
+<hr>
+<%= @dogimages.inspect %>
+
+<ol>
+  <% @doginfos.each do |doginfo| %>
+    <li><a href="http://localhost:3000/dog_infos/<%= doginfo.id %>" ><%= doginfo.name %></a></li>
+  <% end %>
+</ol>

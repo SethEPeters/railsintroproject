@@ -14,18 +14,18 @@ require 'json'
 
 DogInfo.delete_all
 DogImage.delete_all
-# AnimeQuote.destroy_all
 ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='dog_infos'")
 
+DogImage.create!(
+  dog_image: "https://place.dog/300/200"
+)
+
 200.times do
-dog = DogInfo.create!(name: Faker::Creature::Dog.name,
+DogInfo.create!(name: Faker::Creature::Dog.name,
             dog_breed: Faker::Creature::Dog.breed,
             dog_age: Faker::Creature::Dog.age,
-            dog_sound: Faker::Creature::Dog.sound)
+            dog_sound: Faker::Creature::Dog.sound,
+            dog_image_id: 1)
 # this will serve a random dog image. Just need to save it once
-DogImage.create!(
-  dog_info: dog,
-  dog_image: "https://place.dog/300/200",
-)
 end
 
