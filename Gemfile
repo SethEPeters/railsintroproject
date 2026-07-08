@@ -22,6 +22,7 @@ gem "jbuilder"
 gem 'faker'
 gem 'bootstrap', '~> 5.3.8'
 gem "dartsass-rails"
+gem 'kaminari'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
