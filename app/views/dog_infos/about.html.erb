@@ -1,21 +1,55 @@
-<h1>About</h1>
-
-<ul>
-  <li><a href="http://localhost:3000/dog_infos">Index</a></li>
-  <li><a href="http://localhost:3000/dog_infos/about">About</a></li>
-</ul>
-<hr>
-
-<p>I will be using 2 data sources to make my data set. The thre data sources are</p>
-<ul>
-  <li>place.dog <a href=https://place.dog/>https://place.dog/</a></li>
-  <li>Faker</li>
-</ul>
-
-<p>Place.dog  provides dog images. It gives a random image of a dog. I plan to store images of dogs to use. The data is just a standard image link. To hold the image I will have one table with a column for the image link.</p>
-<p>Using the 2 sources I plan to have a dog profile for 200 dogs. Together I will create a page for each entry that is populated by the dog picture and from faker, a dog name, a dog breed, a dog age, and dog sound.</p>
-<p>For faker the data seems to be served by a rails project and so would be a list of names, breeds, ages and sounds. I will make a faker table that holds these elements in seperate columns.</p>
-<p>I will use associations to pull the data from these tables for the profiles. So for instance I will create 200 profiles using faker then from the dog images I will assign an image</p>
-
-<h2>ERD Diagram</h2>
-<%= image_tag "ERDIntroRails.png", alt: "ERD diagram" %>
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <h1>About</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <a href="http://localhost:3000/dog_infos">Index</a>
+    </div>
+    <div class="col">
+      <a href="http://localhost:3000/dog_infos/about">About</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>I will be using 2 data sources to make my data set. The thre data sources are</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>place.dog <a href=https://place.dog/>https://place.dog/</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Place.dog  provides dog images. It gives a random image of a dog. I plan to store images of dogs to use. The data is just a standard image link. To hold the image I will have one table with a column for the image link.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Using the 2 sources I plan to have a dog profile for 200 dogs. Together I will create a page for each entry that is populated by the dog picture and from faker, a dog name, a dog breed, a dog age, and dog sound.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>For faker the data seems to be served by a rails project and so would be a list of names, breeds, ages and sounds. I will make a faker table that holds these elements in seperate columns.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>I will use associations to pull the data from these tables for the profiles. So for instance I will create 200 profiles using faker then from the dog images I will assign an image</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>ERD Diagram</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%= image_tag "ERDIntroRails.png", alt: "ERD diagram" %>
+    </div>
+  </div>
+</div>
