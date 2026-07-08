@@ -1,0 +1,13 @@
+
+<h1>About</h1>
+
+<p>I will be using 2 data sources to make my data set. The thre data sources are</p>
+<ul>
+  <li>place.dog <a href=https://place.dog/>https://place.dog/</a></li>
+  <li>Faker</li>
+</ul>
+
+<p>Place.dog  provides dog images. It gives a random image of a dog. I plan to store images of dogs to use. The data is just a standard image link. To hold the image I will have one table with a column for the image link.</p>
+<p>Using the 2 sources I plan to have a dog profile for 200 dogs. Together I will create a page for each entry that is populated by the dog picture and from faker, a dog name, a dog breed, a dog age, and dog sound.</p>
+<p>For faker the data seems to be served by a rails project and so would be a list of names, breeds, ages and sounds. I will make a faker table that holds these elements in seperate columns.</p>
+<p>I will use associations to pull the data from these tables for the profiles. So for instance I will create 200 profiles using faker then from the dog images I will assign an image</p>

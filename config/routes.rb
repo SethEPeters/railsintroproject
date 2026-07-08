@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-resources :dog_infos
+  get "dog_infos/about", to: "dog_infos#about"
+  resources :dog_infos
   # get "doginfos/index"
   # get "doginfos/show"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

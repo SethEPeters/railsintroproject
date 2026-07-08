@@ -6,8 +6,11 @@ class DogInfosController < ApplicationController
       @doginfos = DogInfo.all
     end
   end
+
   def show
     @doginfo = DogInfo.find(params[:id]) # Find the product with the primary key mentioned in the URL.
-    @dogimage = DogImage.find(params[:id])
+  end
+
+  def about
   end
 end
